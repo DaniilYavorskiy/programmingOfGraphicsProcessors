@@ -1,0 +1,17 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\79133\source\repos\lab8gpu>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include"     --keep-dir lab8gpu\x64\Release  -maxrregcount=0   --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/Fdlab8gpu\x64\Release\vc143.pdb" -o C:\Users\79133\source\repos\lab8gpu\lab8gpu\x64\Release\kernel.cu.obj "C:\Users\79133\source\repos\lab8gpu\kernel.cu" 
+C:\Users\79133\source\repos\lab8gpu\kernel.cu(13): warning #550-D: variable "status" was set but never used
+        cublasStatus_t status;
+                       ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+  kernel.cu
+  tmpxft_000030e4_00000000-7_kernel.cudafe1.cpp
+C:\Users\79133\source\repos\lab8gpu\kernel.cu(83): warning C4996: 'cudaThreadSynchronize': объявлен deprecate
+C:\Users\79133\source\repos\lab8gpu\kernel.cu(110): warning C4996: 'cudaThreadSynchronize': объявлен deprecate
+     Создается библиотека C:\Users\79133\source\repos\lab8gpu\x64\Release\lab8gpu.lib и объект C:\Users\79133\source\repos\lab8gpu\x64\Release\lab8gpu.exp
+LINK : warning LNK4098: библиотека по умолчанию "LIBCMT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+  LINK : указан параметр /LTCG, но не требуется создание кода; удалите /LTCG из командной строки компоновки для повышения производительности компоновщика
+  lab8gpu.vcxproj -> C:\Users\79133\source\repos\lab8gpu\x64\Release\lab8gpu.exe

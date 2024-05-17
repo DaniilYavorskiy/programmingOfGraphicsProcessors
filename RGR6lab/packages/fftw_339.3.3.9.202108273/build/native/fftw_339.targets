@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CopyfftwNativeBinaries"  AfterTargets="CopyFilesToOutputDirectory">
+    <Message Importance="High" Text="Copying fftw native binaries..." />
+    <!-- <MakeDir Directories="$(OutDir)\fftw_bin"/> -->
+    <ItemGroup>
+      <AvailableItemName Include="fftwNativeBinary"/>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <fftwNativeBinary Include="$(MSBuildThisFileDirectory)..\..\lib\native\fftw-debug\bin\*.dll"></fftwNativeBinary>
+    </ItemGroup>
+	
+	<ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <fftwNativeBinary Include="$(MSBuildThisFileDirectory)..\..\lib\native\fftw-release\bin\*.dll"></fftwNativeBinary>
+    </ItemGroup>
+
+    <Copy SourceFiles="@(fftwNativeBinary)"
+          DestinationFiles="@(fftwNativeBinary->'$(OutDir)\%(Filename)%(Extension)')">
+      <Output TaskParameter="DestinationFiles" ItemName="FileWrites" />
+    </Copy>
+  </Target>
+</Project>

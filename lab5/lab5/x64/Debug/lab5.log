@@ -1,0 +1,22 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\79133\source\repos\lab5>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include"  -G   --keep-dir lab5\x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdlab5\x64\Debug\vc143.pdb" -o C:\Users\79133\source\repos\lab5\lab5\x64\Debug\kernel.cu.obj "C:\Users\79133\source\repos\lab5\kernel.cu" 
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+C:\Users\79133\source\repos\lab5\kernel.cu(22): warning #550-D: variable "cpuBandwidth" was set but never used
+    	double cpuTime, cpuBandwidth;
+    	                ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\79133\source\repos\lab5\kernel.cu(25): warning #550-D: variable "matrAC" was set but never used
+    	float* matrA, * matrATC, * matrATG, * matrAC;
+    	                                      ^
+  
+  kernel.cu
+  tmpxft_00005574_00000000-7_kernel.cudafe1.cpp
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+C:\Users\79133\source\repos\lab5\kernel.cu(27): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\79133\source\repos\lab5\kernel.cu(240): warning C4068: неизвестная прагма "unroll"
+C:\Users\79133\source\repos\lab5\kernel.cu(242): warning C4068: неизвестная прагма "unroll"
+C:\Users\79133\source\repos\lab5\kernel.cu(244): warning C4068: неизвестная прагма "unroll"
+  lab5.vcxproj -> C:\Users\79133\source\repos\lab5\x64\Debug\lab5.exe

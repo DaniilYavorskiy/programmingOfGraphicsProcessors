@@ -1,0 +1,11 @@
+prefix=E:/ZengXu-Project/OX-WIT/NugetPackages/fftw/install
+exec_prefix=E:/ZengXu-Project/OX-WIT/NugetPackages/fftw/install
+libdir=E:/ZengXu-Project/OX-WIT/NugetPackages/fftw/install/lib
+includedir=E:/ZengXu-Project/OX-WIT/NugetPackages/fftw/install/include
+
+Name: FFTW
+Description: fast Fourier transform library
+Version: 3.3.9
+Libs: -L${libdir} -lfftw3 
+Libs.private: -lm
+Cflags: -I${includedir}
